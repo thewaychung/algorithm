@@ -52,17 +52,18 @@ public class BinarySearchTree {
         x.N = x.left.N + x.right.N + 1;
         return x;
     }
-}
 
-class Node {
-    Key key;
-    Object value;
-    Node left, right;//左右子节点
-    int N;//以该节点为根的子树节点总数
+    //节点
+    private class Node {
+        Key key;
+        Object value;
+        Node left, right;//左右子节点
+        int N;//以该节点为根的子树节点总数
 
-    public Node(Key key, Object value, int N) {
-        this.key = key;
-        this.value = value;
-        this.N = N;
+        public Node(Key key, Object value, int N) {
+            this.key = key;
+            this.value = value;
+            this.N = N;
+        }
     }
 }
