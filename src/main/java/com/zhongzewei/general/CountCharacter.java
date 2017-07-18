@@ -1,7 +1,7 @@
 package com.zhongzewei.general;
 
 /**
- * 给定一段字符串，如ab%sdf$%ez，返回该字符串有几段字母。该例中有三段。
+ * 给定一段字符串，如ab%sdf$%ez，返回该字符串有几段字母。如该例中有三段。
  *
  * Created by zhongz on 2017/7/18.
  */
