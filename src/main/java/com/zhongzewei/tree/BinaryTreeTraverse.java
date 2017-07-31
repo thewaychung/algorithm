@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class BinaryTreeTraverse {
 
     //前序遍历：根节点->左子树->右子树(递归实现)
-    public void preorderTraverse(BinarySearchTree.Node root) {
+    public void preorderTraverse(TreeNode root) {
         if(root!=null) {
             System.out.println(root.value);
             preorderTraverse(root.left);
@@ -18,7 +18,7 @@ public class BinaryTreeTraverse {
     }
 
     //后序遍历：左子树->右子树->根节点(递归实现)
-    public void postorderTraverse(BinarySearchTree.Node root) {
+    public void postorderTraverse(TreeNode root) {
         if(root!=null) {
             postorderTraverse(root.left);
             postorderTraverse(root.right);
@@ -27,7 +27,7 @@ public class BinaryTreeTraverse {
     }
 
     //中序遍历：左子树->根节点->右子树(递归实现)
-    public void inorderTraverse(BinarySearchTree.Node root) {
+    public void inorderTraverse(TreeNode root) {
         if(root!=null) {
             inorderTraverse(root.left);
             System.out.println(root.value);
@@ -36,12 +36,12 @@ public class BinaryTreeTraverse {
     }
 
     //层次遍历：自顶向下，从左到右逐层访问每个节点
-    public void levelTraverse(BinarySearchTree.Node root) {
+    public void levelTraverse(TreeNode root) {
         if(root!=null) {
-            LinkedList<BinarySearchTree.Node> queue = new LinkedList<BinarySearchTree.Node>();
+            LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
             queue.add(root);
             while (!queue.isEmpty()) {
-                BinarySearchTree.Node node = queue.poll();
+                TreeNode node = queue.poll();
                 System.out.println(node.value);
                 if (node.left !=null) queue.add(node.left);
                 if (node.right !=null) queue.add(node.right);
