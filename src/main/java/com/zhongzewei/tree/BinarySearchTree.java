@@ -54,7 +54,7 @@ public class BinarySearchTree {
     }
 
     //节点
-    private class Node {
+    public class Node {
         Key key;
         Object value;
         Node left, right;//左右子节点
